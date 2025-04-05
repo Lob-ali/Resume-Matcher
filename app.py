@@ -134,5 +134,9 @@ def download_pdf():
     pdf_path = os.path.join(app.config['UPLOAD_FOLDER'], 'resume_results.pdf')
     return send_file(pdf_path, as_attachment=True)
 
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
